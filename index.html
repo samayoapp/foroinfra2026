@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261017">
 </head>
 <body>
 
@@ -46,17 +46,17 @@
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="#evento" class="nav-link">El Foro</a></li>
-          <li class="section-hidden"><a href="#registro" class="nav-link">Registro</a></li>
+          <li class="section-hidden" style="display: none !important;"><a href="#registro" class="nav-link">Registro</a></li>
           <li><a href="#pilares" class="nav-link">4 Pilares</a></li>
-          <li class="section-hidden"><a href="#expositores" class="nav-link">Expositores</a></li>
-          <li class="section-hidden"><a href="#agenda" class="nav-link">Agenda</a></li>
+          <li class="section-hidden" style="display: none !important;"><a href="#expositores" class="nav-link">Expositores</a></li>
+          <li class="section-hidden" style="display: none !important;"><a href="#agenda" class="nav-link">Agenda</a></li>
           <li><a href="#contacto" class="nav-link">Ubicación</a></li>
         </ul>
       </nav>
 
       <!-- Nav CTA -->
       <div class="nav-actions">
-        <a href="#registro" class="btn-nav-register section-hidden" id="btn-quick-nav-register">
+        <a href="#registro" class="btn-nav-register section-hidden" id="btn-quick-nav-register" style="display: none !important;">
           <i class="fas fa-ticket-alt"></i> Registrarme
         </a>
         <button class="nav-toggle" aria-label="Abrir menú de navegación">
@@ -156,7 +156,7 @@
 
       <!-- Hero Actions -->
       <div class="hero-actions">
-        <a href="#registro" class="btn-primary-hero section-hidden">
+        <a href="#registro" class="btn-primary-hero section-hidden" style="display: none !important;">
           <i class="fas fa-edit"></i> REGÍSTRATE AHORA MISMO
         </a>
         <a href="#pilares" class="btn-primary-hero">
@@ -255,9 +255,9 @@
 
   <!-- ==========================================================================
        SECCIÓN TEMPORALMENTE OCULTA: REGISTRATION FORM & EVENTBRITE INTEGRATION
-       (Para reactivar, remover la clase "section-hidden")
+       (Para reactivar, remover style="display: none !important;" o clase "section-hidden")
        ========================================================================== -->
-  <section class="section registration-section section-hidden" id="registro" aria-hidden="true">
+  <section class="section registration-section section-hidden" id="registro" style="display: none !important;" aria-hidden="true">
     <div class="container">
       
       <div class="section-header">
@@ -552,9 +552,9 @@
 
   <!-- ==========================================================================
        SECCIÓN TEMPORALMENTE OCULTA: EXPOSITORES / SPEAKERS SECTION
-       (Para reactivar, remover la clase "section-hidden")
+       (Para reactivar, remover style="display: none !important;" o clase "section-hidden")
        ========================================================================== -->
-  <section class="section speakers-section section-hidden" id="expositores" aria-hidden="true">
+  <section class="section speakers-section section-hidden" id="expositores" style="display: none !important;" aria-hidden="true">
     <div class="container">
       
       <div class="section-header">
@@ -634,9 +634,9 @@
 
   <!-- ==========================================================================
        SECCIÓN TEMPORALMENTE OCULTA: AGENDA DEL EVENTO
-       (Para reactivar, remover la clase "section-hidden")
+       (Para reactivar, remover style="display: none !important;" o clase "section-hidden")
        ========================================================================== -->
-  <section class="section agenda-section section-hidden" id="agenda" aria-hidden="true">
+  <section class="section agenda-section section-hidden" id="agenda" style="display: none !important;" aria-hidden="true">
     <div class="container">
       
       <div class="section-header">
@@ -780,9 +780,9 @@
 
   <!-- ==========================================================================
        SECCIÓN TEMPORALMENTE OCULTA: PREGUNTAS FRECUENTES (FAQ)
-       (Para reactivar, remover la clase "section-hidden")
+       (Para reactivar, remover style="display: none !important;" o clase "section-hidden")
        ========================================================================== -->
-  <section class="section faq-section section-hidden" id="faq" aria-hidden="true">
+  <section class="section faq-section section-hidden" id="faq" style="display: none !important;" aria-hidden="true">
     <div class="container">
       
       <div class="section-header">
@@ -882,10 +882,10 @@
           <ul class="footer-links-list">
             <li class="footer-link-item"><a href="#hero">Inicio</a></li>
             <li class="footer-link-item"><a href="#evento">Sobre el Evento</a></li>
-            <li class="footer-link-item section-hidden"><a href="#registro">Formulario de Registro</a></li>
+            <li class="footer-link-item section-hidden" style="display: none !important;"><a href="#registro">Formulario de Registro</a></li>
             <li class="footer-link-item"><a href="#pilares">Los 4 Pilares</a></li>
-            <li class="footer-link-item section-hidden"><a href="#expositores">Expositores</a></li>
-            <li class="footer-link-item section-hidden"><a href="#agenda">Agenda y Horarios</a></li>
+            <li class="footer-link-item section-hidden" style="display: none !important;"><a href="#expositores">Expositores</a></li>
+            <li class="footer-link-item section-hidden" style="display: none !important;"><a href="#agenda">Agenda y Horarios</a></li>
           </ul>
         </div>
 
@@ -1001,6 +1001,6 @@
   </div>
 
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20261017"></script>
 </body>
 </html>
