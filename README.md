@@ -4,7 +4,7 @@
 
 Landing page oficial del **Foro de Infraestructura 2026**, organizado por la **Cámara Hondureña de la Industria de la Construcción (CHICO)** y **Cementos del Norte S.A. (Bijao)**.
 
-- **Fecha:** Miércoles 05 de Noviembre de 2026
+- **Fecha:** Jueves 05 de Noviembre de 2026
 - **Sede:** Centro de Convenciones del Hotel Copantl, San Pedro Sula, Honduras
 
 ---
