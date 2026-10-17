@@ -423,9 +423,19 @@ function initModals() {
           ${projectsHtml}
         </ul>
         <div style="text-align: right; margin-top: 20px;">
-          <a href="#registro" class="btn-submit-reg" onclick="document.getElementById('generic-modal').classList.remove('active')" style="display:inline-flex; padding: 10px 24px; font-size:0.9rem;">
-            Registrarme para asistir a esta mesa
-          </a>
+          ${
+            (() => {
+              const regSec = document.getElementById('registro');
+              const isRegVisible = regSec && regSec.style.display !== 'none' && !regSec.classList.contains('section-hidden');
+              return isRegVisible
+                ? `<a href="#registro" class="btn-submit-reg" onclick="document.getElementById('generic-modal').classList.remove('active')" style="display:inline-flex; padding: 10px 24px; font-size:0.9rem;">
+                    Registrarme para asistir a esta mesa
+                  </a>`
+                : `<button type="button" class="btn-submit-reg" onclick="document.getElementById('generic-modal').classList.remove('active')" style="display:inline-flex; padding: 10px 24px; font-size:0.9rem; cursor:pointer;">
+                    <i class="fas fa-check" style="margin-right:8px;"></i> Entendido
+                  </button>`;
+            })()
+          }
         </div>
       `;
 

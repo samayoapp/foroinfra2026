@@ -1898,3 +1898,10 @@ img {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   UTILITY FOR TEMPORARILY HIDDEN SECTIONS
+   ========================================================================== */
+.section-hidden {
+  display: none !important;
+}
