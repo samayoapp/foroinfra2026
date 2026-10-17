@@ -137,41 +137,20 @@ function initEventbriteWidget() {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  let isInitialized = false;
+  const iframe = document.getElementById('eventbrite-checkout-iframe');
 
-  function createCheckoutWidget() {
-    if (isInitialized) return true;
-    if (window.EBWidgets && typeof window.EBWidgets.createWidget === 'function') {
-      window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '2003552143395',
-        iframeContainerId: containerId,
-        iframeContainerHeight: 460,
-        onOrderComplete: function() {
-          console.log('Pedido completado exitosamente en Eventbrite');
+  // Auto-resize iframe when Eventbrite communicates step height
+  window.addEventListener('message', (event) => {
+    if (event.origin && (event.origin.includes('eventbrite.com') || event.origin.includes('eventbrite.com.mx'))) {
+      try {
+        const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+        if (data && data.height && iframe) {
+          iframe.style.height = Math.max(540, data.height + 20) + 'px';
         }
-      });
-      isInitialized = true;
-      return true;
-    }
-    return false;
-  }
-
-  // Attempt creation immediately
-  if (!createCheckoutWidget()) {
-    let attempts = 0;
-    const checkInterval = setInterval(() => {
-      attempts++;
-      if (createCheckoutWidget() || attempts >= 30) {
-        clearInterval(checkInterval);
+      } catch (e) {
+        // Ignore non-json messages
       }
-    }, 200);
-  }
-
-  // Re-check when user clicks on Eventbrite tab
-  const ebTab = document.getElementById('tab-eventbrite');
-  ebTab?.addEventListener('click', () => {
-    createCheckoutWidget();
+    }
   });
 }
 
