@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261017">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261017b">
 </head>
 <body>
 
@@ -50,7 +50,7 @@
           <li><a href="#pilares" class="nav-link">4 Pilares</a></li>
           <li class="section-hidden" style="display: none !important;"><a href="#expositores" class="nav-link">Expositores</a></li>
           <li class="section-hidden" style="display: none !important;"><a href="#agenda" class="nav-link">Agenda</a></li>
-          <li><a href="#contacto" class="nav-link">Ubicación</a></li>
+          <li class="section-hidden" style="display: none !important;"><a href="#contacto" class="nav-link">Ubicación</a></li>
         </ul>
       </nav>
 
@@ -851,9 +851,62 @@
   </section>
 
   <!-- ==========================================================================
-       INSTITUTIONAL FOOTER
+       BANNER DE CIERRE: MUY PRONTO SE HABILITARÁ EL REGISTRO
        ========================================================================== -->
-  <footer class="site-footer" id="contacto">
+  <section class="section closing-banner-section" id="proximamente-registro" style="background: linear-gradient(180deg, #07172c 0%, #0a192f 100%); padding: 75px 20px 65px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; position: relative; overflow: hidden;">
+    
+    <!-- Decorative subtle background radial glow -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 620px; height: 380px; background: radial-gradient(circle, rgba(16, 185, 129, 0.16) 0%, rgba(11, 37, 69, 0) 70%); pointer-events: none;"></div>
+
+    <div class="container" style="position: relative; z-index: 2; max-width: 840px; margin: 0 auto;">
+      
+      <!-- Status Badge with Live Pulse Dot -->
+      <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); padding: 9px 20px; border-radius: 9999px; margin-bottom: 24px; backdrop-filter: blur(8px);">
+        <span style="width: 10px; height: 10px; background: #10b981; border-radius: 50%; display: inline-block; animation: pulse-dot 2s infinite;"></span>
+        <span style="color: #6ee7b7; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Acreditaciones & Admisión</span>
+      </div>
+
+      <!-- Main Headline requested by user -->
+      <h2 style="font-family: 'Montserrat', sans-serif; font-size: clamp(1.85rem, 4.5vw, 2.85rem); font-weight: 900; color: #ffffff; text-transform: uppercase; letter-spacing: 0.6px; line-height: 1.25; margin-bottom: 18px;">
+        MUY PRONTO SE HABILITARÁ EL REGISTRO
+      </h2>
+
+      <!-- Subtitle & Context -->
+      <p style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.7; max-width: 700px; margin: 0 auto 32px; font-weight: 400;">
+        Los cupos presenciales para el <strong style="color: #ffffff; font-weight: 700;">Foro de Infraestructura 2026</strong> en el Centro de Convenciones del Hotel Copantl se habilitarán próximamente. Mantente atento a los canales oficiales para asegurar tu participación en el evento cumbre de la región.
+      </p>
+
+      <!-- Key Visual Event Metadata Pill -->
+      <div style="display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); padding: 14px 30px; border-radius: 16px; margin-bottom: 36px; backdrop-filter: blur(10px);">
+        <div style="display: flex; align-items: center; gap: 9px; color: #93c5fd; font-size: 0.95rem; font-weight: 600;">
+          <i class="far fa-calendar-alt" style="color: #38bdf8;"></i> Miércoles 05 de Noviembre 2026
+        </div>
+        <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
+        <div style="display: flex; align-items: center; gap: 9px; color: #a7f3d0; font-size: 0.95rem; font-weight: 600;">
+          <i class="fas fa-map-marker-alt" style="color: #10b981;"></i> Hotel Copantl, San Pedro Sula
+        </div>
+      </div>
+
+      <!-- Institutional Logos Minimal -->
+      <div style="display: flex; justify-content: center; align-items: center; gap: 24px; opacity: 0.9; margin-bottom: 32px;">
+        <img src="assets/images/logos/logo_chico.png" alt="CHICO" style="height: 42px; object-fit: contain; filter: brightness(0) invert(1);">
+        <div style="width: 1px; height: 28px; background: rgba(255, 255, 255, 0.25);"></div>
+        <img src="assets/images/logos/logo_cementos_bijao.png" alt="Cementos Bijao" style="height: 40px; object-fit: contain; filter: brightness(0) invert(1);">
+      </div>
+
+      <!-- Minimal Bottom Bar -->
+      <div style="font-size: 0.82rem; color: #64748b; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 24px;">
+        &copy; 2026 Foro de Infraestructura. Una iniciativa de la Cámara Hondureña de la Industria de la Construcción (CHICO) & Cementos del Norte S.A. (Bijao).
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN TEMPORALMENTE OCULTA: INSTITUTIONAL FOOTER
+       (Para reactivar, remover style="display: none !important;" o clase "section-hidden")
+       ========================================================================== -->
+  <footer class="site-footer section-hidden" id="contacto" style="display: none !important;" aria-hidden="true">
     <div class="container">
       
       <div class="footer-top-grid">
@@ -1001,6 +1054,6 @@
   </div>
 
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js?v=20261017"></script>
+  <script src="assets/js/main.js?v=20261017b"></script>
 </body>
 </html>
