@@ -271,18 +271,34 @@
         
         <!-- Tab Selector Header -->
         <div class="reg-tabs-header">
-          <button class="reg-tab-btn active" data-target="panel-direct-form" id="tab-direct">
-            <i class="fas fa-clipboard-check"></i> Registro Directo Rápido
-            <span class="badge-pill">Activo</span>
+          <button class="reg-tab-btn active" data-target="panel-eventbrite" id="tab-eventbrite">
+            <i class="fas fa-ticket-alt"></i> Boletos en Eventbrite
+            <span class="badge-pill" style="background: #f05537;">Oficial</span>
           </button>
-          <button class="reg-tab-btn" data-target="panel-eventbrite" id="tab-eventbrite">
-            <i class="fas fa-ticket-alt"></i> Integración Eventbrite
-            <span class="badge-pill" style="background: #f05537;">Módulo Listo</span>
+          <button class="reg-tab-btn" data-target="panel-direct-form" id="tab-direct">
+            <i class="fas fa-clipboard-check"></i> Registro Directo Rápido
+            <span class="badge-pill">Nativo</span>
           </button>
         </div>
 
-        <!-- Panel 1: Direct Registration Form -->
-        <div class="reg-tab-content reg-tab-panel" id="panel-direct-form">
+        <!-- Panel 1: Eventbrite Official Module -->
+        <div class="reg-tab-content reg-tab-panel" id="panel-eventbrite">
+          <div style="background: #ffffff; border-radius: 12px; padding: 12px 6px; min-height: 440px;">
+            <div id="eventbrite-widget-container-2003552143395"></div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 18px; padding: 14px 18px; background: rgba(240, 85, 55, 0.06); border-radius: 10px; border: 1px solid rgba(240, 85, 55, 0.2); display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;">
+            <span style="font-size: 0.92rem; color: #334155;">
+              <i class="fas fa-shield-alt" style="color: #10b981;"></i> Registro oficial del Foro de Infraestructura 2026 procesado por <strong>Eventbrite</strong>.
+            </span>
+            <a href="https://www.eventbrite.com.mx/e/2003552143395" target="_blank" rel="noopener" class="btn-eventbrite-ext" style="display: inline-flex; align-items: center; gap: 8px; background: #f05537; color: white; padding: 8px 18px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; text-decoration: none;">
+              <i class="fas fa-external-link-alt"></i> Abrir en Eventbrite
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel 2: Direct Registration Form -->
+        <div class="reg-tab-content reg-tab-panel" id="panel-direct-form" style="display: none;">
           <form id="forum-register-form">
             <div class="form-grid">
               
@@ -346,32 +362,6 @@
               </button>
             </div>
           </form>
-        </div>
-
-        <!-- Panel 2: Eventbrite Module / Embed Placeholder -->
-        <div class="reg-tab-content reg-tab-panel" id="panel-eventbrite" style="display: none;">
-          <div class="eventbrite-placeholder-box">
-            <div class="eventbrite-badge">
-              <i class="fas fa-ticket-alt"></i> Conexión Eventbrite
-            </div>
-            <h3 class="eventbrite-placeholder-title">
-              Espacio Configurado para Conectar Eventbrite
-            </h3>
-            <p class="eventbrite-placeholder-desc">
-              Este bloque está programado y listo para que insertes el <em>iframe de Eventbrite</em> o el widget embebido oficial en cuanto tengas habilitado el evento en tu cuenta.
-            </p>
-            
-            <div class="eventbrite-code-hint">
-              &lt;!-- Inserta aquí tu iframe o script oficial de Eventbrite --&gt;<br>
-              &lt;div id="eventbrite-widget-container-123456789"&gt;&lt;/div&gt;
-            </div>
-
-            <div>
-              <a href="https://www.eventbrite.com" target="_blank" rel="noopener" class="btn-eventbrite-ext">
-                <i class="fas fa-external-link-alt"></i> Abrir Plataforma Eventbrite
-              </a>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -1039,7 +1029,10 @@
     </div>
   </div>
 
+  <!-- Eventbrite Official Checkout Widget Scripts -->
+  <script src="https://www.eventbrite.com.mx/static/widgets/eb_widgets.js"></script>
+
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js?v=20261017e"></script>
+  <script src="assets/js/main.js?v=20261017f"></script>
 </body>
 </html>

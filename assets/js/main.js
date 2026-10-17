@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initParallax();
   initRegistrationTabs();
+  initEventbriteWidget();
   initRegistrationForm();
   initAgendaTabs();
   initFaqAccordion();
@@ -125,6 +126,52 @@ function initRegistrationTabs() {
         targetPanel.style.display = 'block';
       }
     });
+  });
+}
+
+/* ==========================================================================
+   3B. EVENTBRITE OFFICIAL CHECKOUT WIDGET INITIALIZATION
+   ========================================================================== */
+function initEventbriteWidget() {
+  const containerId = 'eventbrite-widget-container-2003552143395';
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  let isInitialized = false;
+
+  function createCheckoutWidget() {
+    if (isInitialized) return true;
+    if (window.EBWidgets && typeof window.EBWidgets.createWidget === 'function') {
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '2003552143395',
+        iframeContainerId: containerId,
+        iframeContainerHeight: 460,
+        onOrderComplete: function() {
+          console.log('Pedido completado exitosamente en Eventbrite');
+        }
+      });
+      isInitialized = true;
+      return true;
+    }
+    return false;
+  }
+
+  // Attempt creation immediately
+  if (!createCheckoutWidget()) {
+    let attempts = 0;
+    const checkInterval = setInterval(() => {
+      attempts++;
+      if (createCheckoutWidget() || attempts >= 30) {
+        clearInterval(checkInterval);
+      }
+    }, 200);
+  }
+
+  // Re-check when user clicks on Eventbrite tab
+  const ebTab = document.getElementById('tab-eventbrite');
+  ebTab?.addEventListener('click', () => {
+    createCheckoutWidget();
   });
 }
 
