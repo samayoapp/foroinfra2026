@@ -137,15 +137,18 @@ function initEventbriteWidget() {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  const iframe = document.getElementById('eventbrite-checkout-iframe');
-
-  // Auto-resize iframe when Eventbrite communicates step height
+  // Auto-resize iframe when Eventbrite communicates step height via postMessage
   window.addEventListener('message', (event) => {
     if (event.origin && (event.origin.includes('eventbrite.com') || event.origin.includes('eventbrite.com.mx'))) {
       try {
         const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
-        if (data && data.height && iframe) {
-          iframe.style.height = Math.max(540, data.height + 20) + 'px';
+        if (data && data.height) {
+          const iframe = container.querySelector('iframe');
+          const calculatedHeight = Math.max(680, data.height + 25);
+          if (iframe) {
+            iframe.style.height = calculatedHeight + 'px';
+          }
+          container.style.height = calculatedHeight + 'px';
         }
       } catch (e) {
         // Ignore non-json messages
