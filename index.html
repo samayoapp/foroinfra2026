@@ -292,125 +292,21 @@
         </p>
       </div>
 
-      <!-- Registration Card with Dual Option (Direct Form or Eventbrite) -->
-      <div class="registration-card">
+      <!-- ======================================================================
+           >>> AQUÍ QUEDA EL ESPACIO PARA TU REGISTRO <<<
+           Todo lo anterior (tabs, scripts, formularios y Eventbrite) ha sido eliminado.
+           ====================================================================== -->
+      <div class="registration-card" id="contenedor-registro" style="padding: 40px 20px; text-align: center; min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
 
-        <!-- Tab Selector Header -->
-        <div class="reg-tabs-header">
-          <button class="reg-tab-btn active" data-target="panel-eventbrite" id="tab-eventbrite">
-            <i class="fas fa-ticket-alt"></i> Boletos en Eventbrite
-            <span class="badge-pill" style="background: #f05537;">Oficial</span>
-          </button>
-          <button class="reg-tab-btn" data-target="panel-direct-form" id="tab-direct">
-            <i class="fas fa-clipboard-check"></i> Registro Directo Rápido
-            <span class="badge-pill">Nativo</span>
-          </button>
+        <!-- [INICIA TU CÓDIGO / FORMULARIO / WIDGET AQUÍ] -->
+        <div style="color: #64748b; font-size: 1rem; line-height: 1.6;">
+          <i class="fas fa-ticket-alt" style="font-size: 2.2rem; color: #0284c7; margin-bottom: 12px; display: block;"></i>
+          <strong style="color: #0b2545; font-size: 1.15rem; display: block; margin-bottom: 6px;">Espacio de Registro Limpio</strong>
+          <span>Este contenedor está listo para insertar el código o formulario que desees.</span>
         </div>
+        <!-- [TERMINA TU CÓDIGO / FORMULARIO / WIDGET AQUÍ] -->
 
-        <!-- Panel 1: Eventbrite Official Module (Proceso 100% Embebido) -->
-        <div id="eventbrite-widget-container-2003552143395"></div>
-
-        <script src="https://www.eventbrite.com.mx/static/widgets/eb_widgets.js"></script>
-
-        <script type="text/javascript">
-          var exampleCallback = function () {
-            console.log('Pedido completo');
-          };
-
-          window.EBWidgets.createWidget({
-            // Required
-            widgetType: 'checkout',
-            eventId: '2003552143395',
-            iframeContainerId: 'eventbrite-widget-container-2003552143395',
-
-            // Optional
-            iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-
-            onOrderComplete: exampleCallback  // Method called when an order has successfully completed
-          });
-        </script>
-
-        <div
-          style="text-align: center; margin-top: 14px; padding: 10px; color: var(--color-text-muted); font-size: 0.88rem;">
-          <i class="fas fa-shield-alt" style="color: #10b981; margin-right: 6px;"></i> Proceso oficial de admisión,
-          formulario y emisión de boletos 100% integrado dentro de la plataforma.
-        </div>
       </div>
-
-      <!-- Panel 2: Direct Registration Form -->
-      <div class="reg-tab-content reg-tab-panel" id="panel-direct-form" style="display: none;">
-        <form id="forum-register-form">
-          <div class="form-grid">
-
-            <div class="form-group">
-              <label for="reg-fullname" class="form-label">Nombre y Apellido <span class="required">*</span></label>
-              <input type="text" id="reg-fullname" class="form-control" placeholder="Ej. Ing. Juan Fernando Pérez"
-                required>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-email" class="form-label">Correo Electrónico <span class="required">*</span></label>
-              <input type="email" id="reg-email" class="form-control" placeholder="juan.perez@empresa.hn" required>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-phone" class="form-label">Teléfono / WhatsApp <span class="required">*</span></label>
-              <input type="tel" id="reg-phone" class="form-control" placeholder="+504 9999-0000" required>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-org" class="form-label">Empresa u Organización <span class="required">*</span></label>
-              <input type="text" id="reg-org" class="form-control" placeholder="Ej. Constructora del Norte / Alcaldía"
-                required>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-role" class="form-label">Cargo o Posición</label>
-              <input type="text" id="reg-role" class="form-control" placeholder="Ej. Gerente de Proyectos / Director">
-            </div>
-
-            <div class="form-group">
-              <label for="reg-sector" class="form-label">Sector Representado <span class="required">*</span></label>
-              <select id="reg-sector" class="form-control form-select" required>
-                <option value="Sector Privado & Construcción">Sector Privado & Construcción (CHICO)</option>
-                <option value="Sector Público & Gobierno">Sector Público / Gobiernos Municipales / SIT</option>
-                <option value="Infraestructura Logística & Portuaria">Logística, Transporte & Puertos (ENP)</option>
-                <option value="Banca & Organismos Financieros">Organismos Multilaterales & Banca de Desarrollo</option>
-                <option value="Academia & Colegios Profesionales">Colegio de Ingenieros Civiles / Universidad</option>
-                <option value="Medios de Comunicación">Prensa & Medios de Comunicación</option>
-              </select>
-            </div>
-
-            <div class="form-group full-width">
-              <label for="reg-interest" class="form-label">Área de Mayor Interés en el Foro</label>
-              <select id="reg-interest" class="form-control form-select">
-                <option value="Todos los pilares">Todos los pilares del Foro</option>
-                <option value="Infraestructura Vial y Logística (CA-13, Corredor Turístico, ENP)">Infraestructura Vial y
-                  Logística (CA-13, Corredor Turístico, ENP)</option>
-                <option value="Obras Hidráulicas y Control de Inundaciones (El Tablón, Llanitos, Jicatuyo)">Obras
-                  Hidráulicas y Control de Inundaciones (El Tablón, Llanitos, Jicatuyo)</option>
-                <option value="Plantas de Tratamiento de Aguas Residuales (PTAR)">Plantas de Tratamiento de Aguas
-                  Residuales (PTAR)</option>
-                <option value="Gobernanza y Financiamiento de Proyectos">Gobernanza y Financiamiento de Proyectos
-                </option>
-              </select>
-            </div>
-
-          </div>
-
-          <div class="form-footer">
-            <div class="form-guarantee">
-              <i class="fas fa-shield-alt"></i>
-              <span>Evento sin costo para acreditados. Confirmación inmediata con código de acceso digital.</span>
-            </div>
-            <button type="submit" class="btn-submit-reg" id="btn-submit-register">
-              <i class="fas fa-check-circle"></i> Confirmar Mi Registro
-            </button>
-          </div>
-        </form>
-      </div>
-
-    </div>
 
     </div>
   </section>
