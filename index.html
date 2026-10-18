@@ -296,19 +296,38 @@
            >>> AQUÍ QUEDA EL ESPACIO PARA TU REGISTRO <<<
            Todo lo anterior (tabs, scripts, formularios y Eventbrite) ha sido eliminado.
            ====================================================================== -->
-      <div class="registration-card" id="contenedor-registro" style="padding: 40px 20px; text-align: center; min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <div class="registration-card" id="contenedor-registro">
 
-        <!-- [INICIA TU CÓDIGO / FORMULARIO / WIDGET AQUÍ] -->
-        <div style="color: #64748b; font-size: 1rem; line-height: 1.6;">
-          <i class="fas fa-ticket-alt" style="font-size: 2.2rem; color: #0284c7; margin-bottom: 12px; display: block;"></i>
-          <strong style="color: #0b2545; font-size: 1.15rem; display: block; margin-bottom: 6px;">Espacio de Registro Limpio</strong>
-          <span>Este contenedor está listo para insertar el código o formulario que desees.</span>
+        <div id="eventbrite-widget-container-2003552143395">
+
+          <script src="https://www.eventbrite.com.mx/static/widgets/eb_widgets.js"></script>
+
+          <script type="text/javascript">
+            var exampleCallback = function () {
+              console.log('Pedido completo');
+            };
+
+            window.EBWidgets.createWidget({
+              // Required
+              widgetType: 'checkout',
+              eventId: '2003552143395',
+              iframeContainerId: 'eventbrite-widget-container-2003552143395',
+
+              // Optional
+              iframeContainerHeight: 680,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+
+              themeSettings: {
+                brandColor: '#0c9ecf',
+                fontColor: '#000000',
+                background: '#FFFFFF',
+              },
+              onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+            });
+          </script>
+
         </div>
-        <!-- [TERMINA TU CÓDIGO / FORMULARIO / WIDGET AQUÍ] -->
 
       </div>
-
-    </div>
   </section>
 
   <!-- ==========================================================================
@@ -601,126 +620,268 @@
       <!-- Agenda Filter Tabs -->
       <div class="agenda-tabs-nav">
         <button class="agenda-tab-btn active" data-filter="all">Programa Completo</button>
-        <button class="agenda-tab-btn" data-filter="morning">Bloque Matutino (08:30 - 12:00)</button>
-        <button class="agenda-tab-btn" data-filter="midday">Almuerzo & Represas (12:00 - 14:30)</button>
-        <button class="agenda-tab-btn" data-filter="afternoon">Bloque Vespertino (14:30 - 17:30)</button>
+        <button class="agenda-tab-btn" data-filter="morning">Bloque Matutino (08:30 – 11:45)</button>
+        <button class="agenda-tab-btn" data-filter="midday">Almuerzo & Conferencias (11:45 – 14:45)</button>
+        <button class="agenda-tab-btn" data-filter="afternoon">Panel & Coctel de Cierre (14:45 – 20:30)</button>
       </div>
 
       <!-- Timeline Structure -->
       <div class="agenda-timeline">
 
-        <!-- Item 1: Registration -->
+        <!-- Item 1: Registro y Acreditaciones -->
         <div class="timeline-item" data-block="morning">
           <div class="timeline-node"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="timeline-time"><i class="far fa-clock"></i> 08:30 - 09:15</span>
+              <span class="timeline-time"><i class="far fa-clock"></i> 8:30 a.m. – 9:00 a.m.</span>
               <span class="timeline-room">Foyer Principal Copantl</span>
             </div>
-            <h3 class="timeline-title">Registro de Asistentes, Acreditación y Café de Bienvenida</h3>
-            <p class="timeline-desc">Entrega de credenciales electrónicas, gafetes oficiales y material informativo
-              sobre los proyectos estratégicos del Valle de Sula.</p>
+            <h3 class="timeline-title">Registro y Acreditaciones</h3>
+            <p class="timeline-desc">Recepción de asistentes, entrega de credenciales oficiales y material informativo del foro.</p>
           </div>
         </div>
 
-        <!-- Item 2: Inauguration -->
+        <!-- Item 2: Palabras de Arleth Pacheco -->
+        <div class="timeline-item" data-block="morning">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 9:00 a.m. – 9:05 a.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Apertura del Evento & Bienvenida Oficial</h3>
+            <p class="timeline-desc">Inicio del programa protocolario y presentación de las autoridades e invitados especiales.</p>
+            <div class="timeline-speakers">
+              <i class="fas fa-microphone-alt"></i> <span>Arleth Pacheco — Maestra de Ceremonia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Ing. Arnaldo Martínez, presidente de la CHICO -->
         <div class="timeline-item highlight" data-block="morning">
           <div class="timeline-node"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="timeline-time"><i class="far fa-clock"></i> 09:15 - 10:00</span>
-              <span class="timeline-room">Salón Gran Canciller</span>
+              <span class="timeline-time"><i class="far fa-clock"></i> 9:05 a.m. – 9:15 a.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
             </div>
-            <h3 class="timeline-title">Acto Protocolario de Apertura y Declaración de Objetivos</h3>
-            <p class="timeline-desc">Palabras de inauguración por el Presidente de CHICO y representantes de Cementos
-              del Norte S.A. (Bijao), junto a alcaldes de la Zona Metropolitana del Valle de Sula.</p>
+            <h3 class="timeline-title">Mensaje Inaugural de la Cámara Hondureña de la Industria de la Construcción</h3>
+            <p class="timeline-desc">Palabras de apertura y perspectiva gremial sobre los proyectos estratégicos de infraestructura para el país.</p>
             <div class="timeline-speakers">
-              <i class="fas fa-user-tie"></i> <span>Presidencia CHICO & Autoridades Invitadas</span>
+              <i class="fas fa-user-tie"></i> <span>Ing. Arnaldo Martínez — Presidente de la CHICO</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 3: Road & Logistics Panel -->
+        <!-- Item 4: Abog. Erick Rosenthal, Presidente de CENOSA -->
+        <div class="timeline-item highlight" data-block="morning">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 9:15 a.m. – 9:25 a.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Mensaje Inaugural de Cementos del Norte S.A. (CENOSA)</h3>
+            <p class="timeline-desc">Compromiso del sector productivo con la resiliencia, desarrollo y competitividad del Valle de Sula.</p>
+            <div class="timeline-speakers">
+              <i class="fas fa-user-tie"></i> <span>Abog. Erick Rosenthal — Presidente de CENOSA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Ing. Anibal Ehrler, Ministro de la SIT -->
+        <div class="timeline-item highlight" data-block="morning">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 9:25 a.m. – 10:25 a.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Conferencia: Obras de Infraestructura para Potenciar el Desarrollo del Valle de Sula</h3>
+            <p class="timeline-desc">Plan de obras y proyectos prioritarios del Estado en infraestructura vial, conectividad y desarrollo regional.</p>
+            <div class="timeline-speakers">
+              <i class="fas fa-chalkboard-teacher"></i> <span>Ing. Anibal Ehrler — Ministro de la SIT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Receso -->
         <div class="timeline-item" data-block="morning">
           <div class="timeline-node"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="timeline-time"><i class="far fa-clock"></i> 10:00 - 11:30</span>
-              <span class="timeline-room">Salón Gran Canciller</span>
+              <span class="timeline-time"><i class="far fa-clock"></i> 10:25 a.m. – 10:45 a.m.</span>
+              <span class="timeline-room">Área de Networking</span>
             </div>
-            <h3 class="timeline-title">Panel Técnico: Infraestructura Vial y Corredores Logísticos Hacia Puerto Cortés
-            </h3>
-            <p class="timeline-desc">Análisis de prioridades: Tercer carril CA-13 San Pedro Sula–Puerto Cortés, Corredor
-              Turístico La Barca–Tela, Libramientos viales y pasos a desnivel en Choloma y López Arellano.</p>
+            <h3 class="timeline-title">Receso & Coffee Break</h3>
+            <p class="timeline-desc">Espacio de café y relacionamiento entre asistentes y líderes del sector.</p>
+          </div>
+        </div>
+
+        <!-- Item 7: Conferencista de Chile (APP) -->
+        <div class="timeline-item highlight" data-block="morning">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 10:45 a.m. – 11:45 a.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Conferencia: Mecanismos para Financiar y Ejecutar el Desarrollo de los Proyectos de Infraestructura (APP)</h3>
+            <p class="timeline-desc">Esquemas de Alianzas Público-Privadas (APP), financiamiento estructurado y lecciones aprendidas internacionales.</p>
             <div class="timeline-speakers">
-              <i class="fas fa-users"></i> <span>Expositores: Ing. Roberto Valladares (ENP), Representantes de SIT y
-                Expertos Viales</span>
+              <i class="fas fa-globe-americas"></i> <span>Conferencista Internacional (Chile)</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 4: Lunch & Networking -->
+        <!-- Item 8: Receso / Almuerzo -->
         <div class="timeline-item" data-block="midday">
           <div class="timeline-node"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="timeline-time"><i class="far fa-clock"></i> 12:00 - 13:30</span>
+              <span class="timeline-time"><i class="far fa-clock"></i> 11:45 a.m. – 12:45 p.m.</span>
               <span class="timeline-room">Área de Banquetes Copantl</span>
             </div>
-            <h3 class="timeline-title">Almuerzo Institucional & Espacio de Networking</h3>
-            <p class="timeline-desc">Encuentro entre empresarios del sector construcción, inversionistas, banca
-              multilateral y funcionarios de gobierno para intercambiar perspectivas de co-financiamiento.</p>
+            <h3 class="timeline-title">Receso & Almuerzo</h3>
+            <p class="timeline-desc">Tiempo de almuerzo institucional y espacio de networking entre los participantes.</p>
           </div>
         </div>
 
-        <!-- Item 5: Hydraulic Works & Dams -->
+        <!-- Item 9: Ing. Humberto Calderón -->
         <div class="timeline-item highlight" data-block="midday">
           <div class="timeline-node"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="timeline-time"><i class="far fa-clock"></i> 13:30 - 15:00</span>
-              <span class="timeline-room">Salón Gran Canciller</span>
+              <span class="timeline-time"><i class="far fa-clock"></i> 12:45 p.m. – 1:45 p.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
             </div>
-            <h3 class="timeline-title">Conferencia Magistral: Represa El Tablón y Obras de Protección ante Inundaciones
-            </h3>
-            <p class="timeline-desc">Diseño, viabilidad e impacto socioeconómico de las obras de regulación de los ríos
-              Chamelecón y Ulúa (Los Llanitos, Jicatuyo y El Tornillito) para blindar el 60% del PIB nacional.</p>
+            <h3 class="timeline-title">Conferencia: Obras Hidráulicas para Protección y Desarrollo del Valle de Sula</h3>
+            <p class="timeline-desc">Protección y regulación de cuencas de los ríos Ulúa y Chamelecón, represas y obras de mitigación de inundaciones.</p>
             <div class="timeline-speakers">
-              <i class="fas fa-tint"></i> <span>Ponente principal: Dra. Sofía Mendoza y Comisión Hidráulica
-                Regional</span>
+              <i class="fas fa-water"></i> <span>Ing. Humberto Calderón</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 6: Sanitation & Roadmap -->
-        <div class="timeline-item" data-block="afternoon">
+        <!-- Item 10: Ing. Giovanni Espinal -->
+        <div class="timeline-item highlight" data-block="midday">
           <div class="timeline-node"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="timeline-time"><i class="far fa-clock"></i> 15:00 - 16:30</span>
-              <span class="timeline-room">Salón Gran Canciller</span>
+              <span class="timeline-time"><i class="far fa-clock"></i> 1:45 p.m. – 2:45 p.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
             </div>
-            <h3 class="timeline-title">Mesa Redonda: Plantas PTAR en San Pedro Sula y Hoja de Ruta de Inversión
-              2026-2035</h3>
-            <p class="timeline-desc">Saneamiento integral, descontaminación de ríos, tratamiento de aguas residuales
-              urbanas y firma del Pacto por la Infraestructura del Valle de Sula.</p>
+            <h3 class="timeline-title">Conferencia: Tratamiento de Aguas Residuales del Valle de Sula</h3>
+            <p class="timeline-desc">Saneamiento ambiental integral, tratamiento de aguas residuales urbanas e industriales y plantas PTAR.</p>
             <div class="timeline-speakers">
-              <i class="fas fa-handshake"></i> <span>Inga. Elena Flores y Alcaldes Municipales del Valle de Sula</span>
+              <i class="fas fa-recycle"></i> <span>Ing. Giovanni Espinal</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 7: Closing -->
+        <!-- Item 11: Receso -->
         <div class="timeline-item" data-block="afternoon">
           <div class="timeline-node"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
-              <span class="timeline-time"><i class="far fa-clock"></i> 16:30 - 17:15</span>
-              <span class="timeline-room">Salón Gran Canciller</span>
+              <span class="timeline-time"><i class="far fa-clock"></i> 2:45 p.m. – 3:00 p.m.</span>
+              <span class="timeline-room">Área de Networking</span>
             </div>
-            <h3 class="timeline-title">Lectura de Conclusiones y Clausura Oficial</h3>
-            <p class="timeline-desc">Presentación de la Declaración Final de Infraestructura para el Valle de Sula y
-              entrega de certificados a los asistentes.</p>
+            <h3 class="timeline-title">Receso Breve</h3>
+            <p class="timeline-desc">Pausa de café previa al inicio del Gran Panel Plenario.</p>
+          </div>
+        </div>
+
+        <!-- Item 12: Gran Panel Plenario -->
+        <div class="timeline-item highlight" data-block="afternoon">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 3:00 p.m. – 4:30 p.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Panel: Infraestructura Víal, Represas y Plantas de Tratamiento</h3>
+            <p class="timeline-desc">Diálogo multisectorial de alto nivel sobre priorización de proyectos, gobernanza técnica y viabilidad de ejecución.</p>
+            <div style="background: rgba(11, 37, 69, 0.04); border-left: 3px solid var(--color-primary); padding: 12px 16px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-top: 10px; font-size: 0.9rem;">
+              <div style="font-weight: 700; color: var(--color-primary-dark); margin-bottom: 6px;">
+                <i class="fas fa-users-cog" style="color: var(--color-accent-green); margin-right: 6px;"></i> Moderador:
+                <span style="font-weight: 600; color: #334155;">Ing. Cesar Garcia</span>
+              </div>
+              <div style="font-weight: 700; color: var(--color-primary-dark); margin-bottom: 4px;">
+                <i class="fas fa-user-friends" style="color: var(--color-accent-gold); margin-right: 6px;"></i> Panelistas:
+              </div>
+              <ul style="margin: 0; padding-left: 20px; color: #475569; line-height: 1.6;">
+                <li><strong>Ministro de la SIT:</strong> Ing. Anibal Ehrler</li>
+                <li><strong>Director del Consejo Nacional Logístico:</strong> Ing. Héctor Guillén</li>
+                <li><strong>Experto en Obras Hidráulicas:</strong> Ing. Humberto Calderón</li>
+                <li><strong>Especialista en Aguas Residuales:</strong> Ing. Giovanni Espinal</li>
+                <li><strong>Conferencista Extranjero:</strong> Especialista de Chile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 13: Palabras Ing. Cesar García -->
+        <div class="timeline-item" data-block="afternoon">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 4:30 p.m. – 4:40 p.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Palabras de Agradecimiento</h3>
+            <p class="timeline-desc">Agradecimiento a los participantes y conclusiones del gremio de la construcción de la zona noroccidental.</p>
+            <div class="timeline-speakers">
+              <i class="fas fa-user-check"></i> <span>Ing. Cesar García — Presidente del Capitulo Noroccidental (CHICO)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 14: Palabras Ing. Edwin Argueta -->
+        <div class="timeline-item" data-block="afternoon">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 4:40 p.m. – 4:50 p.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Palabras de Agradecimiento</h3>
+            <p class="timeline-desc">Agradecimiento institucional y reiteración del compromiso de la industria con las obras de transformación de Honduras.</p>
+            <div class="timeline-speakers">
+              <i class="fas fa-user-check"></i> <span>Ing. Edwin Argueta — Gerente General CENOSA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 15: Entrega de reconocimientos -->
+        <div class="timeline-item" data-block="afternoon">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 4:50 p.m. – 5:10 p.m.</span>
+              <span class="timeline-room">Salón Principal Copantl</span>
+            </div>
+            <h3 class="timeline-title">Entrega de Reconocimientos</h3>
+            <p class="timeline-desc">Homenaje y entrega de distinciones oficiales a conferencistas, panelistas y figuras destacadas del sector.</p>
+            <div class="timeline-speakers">
+              <i class="fas fa-award" style="color: var(--color-accent-gold);"></i> <span>Comité Organizador CHICO & CENOSA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 16: Coctel de Cierre -->
+        <div class="timeline-item highlight" data-block="afternoon">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-time"><i class="far fa-clock"></i> 5:10 p.m. – 8:30 p.m.</span>
+              <span class="timeline-room">Área Social & Jardines Copantl</span>
+            </div>
+            <h3 class="timeline-title">Coctel de Cierre & Networking</h3>
+            <p class="timeline-desc">Brindis de clausura, celebración y espacio de relacionamiento entre líderes empresariales, autoridades y asistentes.</p>
+            <div class="timeline-speakers">
+              <i class="fas fa-glass-cheers" style="color: var(--color-accent-gold);"></i> <span>Todos los Asistentes e Invitados Especiales</span>
+            </div>
           </div>
         </div>
 
