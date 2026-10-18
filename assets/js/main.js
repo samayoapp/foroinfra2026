@@ -312,28 +312,40 @@ function initFaqAccordion() {
    ========================================================================== */
 const speakerData = {
   speaker1: {
-    name: 'Ing. Carlos Ramos',
-    title: 'Presidente - Cámara Hondureña de la Industria de la Construcción (CHICO)',
-    bio: 'Líder gremial y empresario con más de 25 años de trayectoria en el sector construcción en Honduras. Ha encabezado mesas técnicas público-privadas para la modernización de la infraestructura nacional, impulsando marcos normativos de contratación ágil y planes maestros de inversión en el Valle de Sula.',
-    topic: 'Conferencia Inaugural: Hoja de Ruta de Inversión y Competitividad 2026-2035'
+    name: 'Ing. Anibal Ehrler',
+    title: 'Ministro - Secretaría de Infraestructura y Transporte (SIT)',
+    bio: 'Titular de la Secretaría de Infraestructura y Transporte de Honduras. Lidera la planificación estratégica de obras públicas, corredores viales nacionales, libramientos metropolitanos y la cartera de proyectos prioritarios para transformar la conectividad del Valle de Sula.',
+    topic: 'Conferencia: Obras de Infraestructura para Potenciar el Desarrollo del Valle de Sula | Panelista Plenario'
   },
   speaker2: {
-    name: 'Dra. Sofía Mendoza',
-    title: 'Especialista en Obras Hidráulicas y Gestión de Cuencas',
-    bio: 'Doctora en Ingeniería Hidráulica con experiencia en diseño de presas de contención y sistemas de regulación en cuencas de alto riesgo hidrológico en Centroamérica. Asesora técnica en los estudios de factibilidad y mitigación de las represas El Tablón, Los Llanitos y Jicatuyo.',
-    topic: 'Panel: Presas Estratégicas y Control de Inundaciones en los Ríos Chamelecón y Ulúa'
+    name: 'Conferencista Internacional (Chile)',
+    title: 'Especialista en Alianzas Público-Privadas (APP) y Financiamiento',
+    bio: 'Experto internacional con amplia trayectoria en estructuración de proyectos de infraestructura bajo modelos de Alianzas Público-Privadas (APP) y financiamiento multilateral en América Latina, compartiendo lecciones de éxito del modelo chileno.',
+    topic: 'Conferencia: Mecanismos para Financiar y Ejecutar el Desarrollo de los Proyectos de Infraestructura (APP) | Panelista Plenario'
   },
   speaker3: {
-    name: 'Ing. Roberto Valladares',
-    title: 'Director de Infraestructura y Logística Portuaria (ENP)',
-    bio: 'Experto en corredores logísticos multimodales y modernización portuaria. Ha liderado la planificación del libramiento de Puerto Cortés, el tercer carril del bulevar de acceso y la integración con el Corredor Turístico y el CA-13.',
-    topic: 'Panel: Fortalecimiento de la Red Logística CA-13 y Acceso a Puerto Cortés'
+    name: 'Ing. Humberto Calderón',
+    title: 'Especialista en Obras Hidráulicas y Gestión de Cuencas',
+    bio: 'Ingeniero civil experto en ingeniería hidráulica, recursos hídricos y mitigación de inundaciones en cuencas vulnerables. Con amplia trayectoria en los estudios técnicos y soluciones de control para los ríos Ulúa y Chamelecón y el sistema de represas del Valle de Sula.',
+    topic: 'Conferencia: Obras Hidráulicas para Protección y Desarrollo del Valle de Sula | Panelista Plenario'
   },
   speaker4: {
-    name: 'Inga. Elena Flores',
-    title: 'Directora de Gestión Ambiental y Saneamiento Hídrico',
-    bio: 'Especialista en saneamiento ambiental y plantas de tratamiento de aguas residuales (PTAR). Consultora para organismos multilaterales en proyectos de descontaminación de cuencas fluviales urbanas e infraestructura verde para San Pedro Sula.',
-    topic: 'Conferencia: Plantas PTAR y Recuperación de Afluentes del Valle de Sula'
+    name: 'Ing. Giovanni Espinal',
+    title: 'Especialista en Saneamiento Ambiental y Tratamiento de Aguas Residuales',
+    bio: 'Consultor e ingeniero especialista en diseño, operación y políticas de saneamiento hídrico integral. Lidera iniciativas de tratamiento de aguas residuales industriales y municipales (macroplantas PTAR) para la recuperación de la red fluvial del Valle de Sula.',
+    topic: 'Conferencia: Tratamiento de Aguas Residuales del Valle de Sula | Panelista Plenario'
+  },
+  speaker5: {
+    name: 'Ing. Héctor Guillén',
+    title: 'Director - Consejo Nacional Logístico',
+    bio: 'Director ejecutivo y estratega en logística, transporte de carga y conectividad intermodal en Honduras. Coordina la articulación entre autoridades aduaneras, portuarias, operadores de transporte y la industria productiva del Valle de Sula.',
+    topic: 'Panel Central: Infraestructura Vial, Represas y Plantas de Tratamiento'
+  },
+  speaker6: {
+    name: 'Ing. Cesar Garcia',
+    title: 'Presidente - Cámara Hondureña de la Industria de la Construcción (Capítulo Noroccidental)',
+    bio: 'Destacado líder gremial y empresario de la construcción en la zona norte de Honduras. Encabeza el Capítulo Noroccidental de la CHICO promoviendo la inversión en obras estratégicas, empleo formal y estándares de calidad para el Valle de Sula.',
+    topic: 'Moderador del Gran Panel Plenario & Palabras de Agradecimiento Oficial'
   }
 };
 
