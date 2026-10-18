@@ -303,9 +303,65 @@
           <script src="https://www.eventbrite.com.mx/static/widgets/eb_widgets.js"></script>
 
           <script type="text/javascript">
-            var exampleCallback = function () {
-              console.log('Pedido completo');
+            function renderSuccessConfirmation() {
+              var container = document.getElementById('contenedor-registro');
+              if (!container) return;
+              container.innerHTML = `
+                <div class="registration-success-card" style="padding: 45px 25px; text-align: center; max-width: 650px; margin: 0 auto;">
+                  <div style="width: 76px; height: 76px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);">
+                    <i class="fas fa-check" style="color: #ffffff; font-size: 2.2rem;"></i>
+                  </div>
+                  <h3 style="font-size: 1.75rem; font-weight: 800; color: #0b2545; margin-bottom: 12px;">¡Registro Confirmado con Éxito!</h3>
+                  <p style="color: #475569; font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">
+                    Tu acreditación para el <strong>Foro de Infraestructura 2026</strong> ha sido completada exitosamente. Tu boleto oficial con código QR ha sido enviado a tu correo electrónico.
+                  </p>
+                  
+                  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: #0b2545; font-weight: 700; font-size: 0.95rem;">
+                      <i class="far fa-calendar-alt" style="color: #0284c7; font-size: 1.2rem;"></i>
+                      <span>Jueves 05 de Noviembre de 2026 | 08:30 a.m.</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: #0b2545; font-weight: 700; font-size: 0.95rem;">
+                      <i class="fas fa-map-marker-alt" style="color: #10b981; font-size: 1.2rem;"></i>
+                      <span>Centro de Convenciones Hotel Copantl, San Pedro Sula</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: #64748b; font-size: 0.9rem; line-height: 1.4;">
+                      <i class="fas fa-qrcode" style="color: #f59e0b; font-size: 1.2rem;"></i>
+                      <span>Revisa tu bandeja de entrada o spam. Presenta tu código QR digital al ingresar al evento.</span>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                    <button onclick="window.print()" style="background: #0b2545; color: #ffffff; padding: 12px 28px; border-radius: 50px; font-weight: 700; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem;">
+                      <i class="fas fa-print"></i> Imprimir Constancia
+                    </button>
+                    <button onclick="location.reload()" style="background: transparent; color: #0284c7; border: 2px solid #0284c7; padding: 12px 24px; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 0.95rem;">
+                      Registrar otro participante
+                    </button>
+                  </div>
+                </div>
+              `;
+              container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            var orderCompleted = false;
+            var handleOrderComplete = function () {
+              if (orderCompleted) return;
+              orderCompleted = true;
+              console.log('Pedido de Eventbrite completado con éxito');
+              renderSuccessConfirmation();
             };
+
+            // Escuchar eventos de completitud tanto por el callback oficial como por postMessage cruzado
+            window.addEventListener('message', function (e) {
+              if (orderCompleted) return;
+              if (e && e.data) {
+                var strData = typeof e.data === 'string' ? e.data : JSON.stringify(e.data);
+                if (strData.indexOf('order_complete') !== -1 || strData.indexOf('orderId') !== -1 || strData.indexOf('complete') !== -1) {
+                  handleOrderComplete();
+                }
+              }
+            });
 
             window.EBWidgets.createWidget({
               // Required
@@ -314,20 +370,22 @@
               iframeContainerId: 'eventbrite-widget-container-2003552143395',
 
               // Optional
-              iframeContainerHeight: 680,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+              iframeContainerHeight: 680,
 
               themeSettings: {
                 brandColor: '#0c9ecf',
                 fontColor: '#000000',
                 background: '#FFFFFF',
               },
-              onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+              onOrderComplete: handleOrderComplete
             });
           </script>
 
         </div>
 
       </div>
+
+    </div>
   </section>
 
   <!-- ==========================================================================
