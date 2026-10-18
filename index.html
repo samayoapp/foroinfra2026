@@ -296,92 +296,45 @@
            >>> AQUÍ QUEDA EL ESPACIO PARA TU REGISTRO <<<
            Todo lo anterior (tabs, scripts, formularios y Eventbrite) ha sido eliminado.
            ====================================================================== -->
-      <div class="registration-card" id="contenedor-registro">
+      <div class="registration-card" id="contenedor-registro" style="padding: 24px; min-height: 580px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border-radius: 16px;">
 
-        <div id="eventbrite-widget-container-2003552143395">
-
-          <script src="https://www.eventbrite.com.mx/static/widgets/eb_widgets.js"></script>
-
-          <script type="text/javascript">
-            function renderSuccessConfirmation() {
-              var container = document.getElementById('contenedor-registro');
-              if (!container) return;
-              container.innerHTML = `
-                <div class="registration-success-card" style="padding: 45px 25px; text-align: center; max-width: 650px; margin: 0 auto;">
-                  <div style="width: 76px; height: 76px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);">
-                    <i class="fas fa-check" style="color: #ffffff; font-size: 2.2rem;"></i>
-                  </div>
-                  <h3 style="font-size: 1.75rem; font-weight: 800; color: #0b2545; margin-bottom: 12px;">¡Registro Confirmado con Éxito!</h3>
-                  <p style="color: #475569; font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">
-                    Tu acreditación para el <strong>Foro de Infraestructura 2026</strong> ha sido completada exitosamente. Tu boleto oficial con código QR ha sido enviado a tu correo electrónico.
-                  </p>
-                  
-                  <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px; text-align: left;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: #0b2545; font-weight: 700; font-size: 0.95rem;">
-                      <i class="far fa-calendar-alt" style="color: #0284c7; font-size: 1.2rem;"></i>
-                      <span>Jueves 05 de Noviembre de 2026 | 08:30 a.m.</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: #0b2545; font-weight: 700; font-size: 0.95rem;">
-                      <i class="fas fa-map-marker-alt" style="color: #10b981; font-size: 1.2rem;"></i>
-                      <span>Centro de Convenciones Hotel Copantl, San Pedro Sula</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 12px; color: #64748b; font-size: 0.9rem; line-height: 1.4;">
-                      <i class="fas fa-qrcode" style="color: #f59e0b; font-size: 1.2rem;"></i>
-                      <span>Revisa tu bandeja de entrada o spam. Presenta tu código QR digital al ingresar al evento.</span>
-                    </div>
-                  </div>
-
-                  <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-                    <button onclick="window.print()" style="background: #0b2545; color: #ffffff; padding: 12px 28px; border-radius: 50px; font-weight: 700; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem;">
-                      <i class="fas fa-print"></i> Imprimir Constancia
-                    </button>
-                    <button onclick="location.reload()" style="background: transparent; color: #0284c7; border: 2px solid #0284c7; padding: 12px 24px; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 0.95rem;">
-                      Registrar otro participante
-                    </button>
-                  </div>
-                </div>
-              `;
-              container.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-
-            var orderCompleted = false;
-            var handleOrderComplete = function () {
-              if (orderCompleted) return;
-              orderCompleted = true;
-              console.log('Pedido de Eventbrite completado con éxito');
-              renderSuccessConfirmation();
-            };
-
-            // Escuchar eventos de completitud tanto por el callback oficial como por postMessage cruzado
-            window.addEventListener('message', function (e) {
-              if (orderCompleted) return;
-              if (e && e.data) {
-                var strData = typeof e.data === 'string' ? e.data : JSON.stringify(e.data);
-                if (strData.indexOf('order_complete') !== -1 || strData.indexOf('orderId') !== -1 || strData.indexOf('complete') !== -1) {
-                  handleOrderComplete();
-                }
-              }
-            });
-
-            window.EBWidgets.createWidget({
-              // Required
-              widgetType: 'checkout',
-              eventId: '2003552143395',
-              iframeContainerId: 'eventbrite-widget-container-2003552143395',
-
-              // Optional
-              iframeContainerHeight: 680,
-
-              themeSettings: {
-                brandColor: '#0c9ecf',
-                fontColor: '#000000',
-                background: '#FFFFFF',
-              },
-              onOrderComplete: handleOrderComplete
-            });
-          </script>
-
+        <!-- Registration Features Banner -->
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; padding: 14px 18px; margin-bottom: 20px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px; color: #166534; font-weight: 700; font-size: 0.92rem;">
+            <i class="fas fa-check-circle" style="color: #16a34a; font-size: 1.15rem;"></i>
+            <span>Admisión Gratuita con Registro Previo</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; color: #1e293b; font-size: 0.88rem; font-weight: 600;">
+            <i class="fas fa-qrcode" style="color: #0284c7; font-size: 1.1rem;"></i>
+            <span>Código QR oficial directo a tu correo</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; color: #64748b; font-size: 0.88rem;">
+            <i class="fas fa-shield-alt" style="color: #f59e0b; font-size: 1.1rem;"></i>
+            <span>Plataforma Oficial y Segura</span>
+          </div>
         </div>
+
+        <!-- Ticket Tailor Widget. Paste this into your website where you want the widget to appear. Do not change the code or the widget may not work properly. -->
+        <div class="tt-widget">
+          <div class="tt-widget-fallback">
+            <p>
+              <a href="https://www.tickettailor.com/all-tickets/inversionespublimatecsadecv/?ref=website_widget" target="_blank" style="color: #0284c7; font-weight: 700; font-size: 1.1rem; text-decoration: underline;">
+                Click here to buy tickets / Haz clic aquí para adquirir tus boletos
+              </a>
+              <br />
+              <small><a href="https://www.tickettailor.com?rf=wdg_350854" class="tt-widget-powered" target="_blank" rel="noopener">Sell tickets online with Ticket Tailor</a></small>
+            </p>
+          </div>
+          <script src="https://cdn.tickettailor.com/js/widgets/min/widget.js" 
+                  data-url="https://www.tickettailor.com/all-tickets/inversionespublimatecsadecv/?ref=website_widget" 
+                  data-type="inline" 
+                  data-inline-minimal="false" 
+                  data-inline-show-logo="true" 
+                  data-inline-bg-fill="true" 
+                  data-inline-inherit-ref-from-url-param="" 
+                  data-inline-ref="website_widget"></script>
+        </div>
+        <!-- End of Ticket Tailor Widget -->
 
       </div>
 
@@ -1034,14 +987,15 @@
 
         <div class="faq-item">
           <button class="faq-question-btn">
-            <span>¿Cómo se integra este registro con Eventbrite?</span>
+            <span>¿Cómo recibo mi acreditación y código QR de acceso?</span>
             <i class="fas fa-chevron-down faq-icon-arrow"></i>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              La landing page cuenta con soporte dual: puedes registrarte directamente a través del formulario nativo
-              para obtener un pase digital instantáneo con código QR, o acceder a la pestaña de Eventbrite que se
-              habilitará con el widget oficial para emisión automática de tickets con confirmación por correo.
+              El registro oficial se realiza a través de nuestra plataforma integrada (Ticket Tailor). Al ingresar tus
+              datos, recibirás de inmediato en tu correo electrónico la confirmación con tu boleto digital y tu código
+              QR oficial. Solo debes presentar este código en tu teléfono o impreso en la mesa de acreditación del Hotel
+              Copantl.
             </div>
           </div>
         </div>
@@ -1288,11 +1242,8 @@
     </div>
   </div>
 
-  <!-- Eventbrite Official Checkout Widget Scripts -->
-  <script src="https://www.eventbrite.com.mx/static/widgets/eb_widgets.js"></script>
-
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js?v=20261017f"></script>
+  <script src="assets/js/main.js?v=20261017g"></script>
 </body>
 
 </html>

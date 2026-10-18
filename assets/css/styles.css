@@ -912,29 +912,48 @@ img {
   transform: translateY(-1px);
 }
 
-.eventbrite-embedded-container {
-  width: 100%;
-  min-height: 680px;
-  background: #ffffff;
+/* Ticket Tailor Embedded Checkout Widget */
+.tt-widget {
+  width: 100% !important;
+  min-height: 580px;
+  position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
 }
 
-#eventbrite-widget-container-2003552143395 {
-  width: 100%;
-  min-height: 680px;
-  position: relative;
-}
-
-#eventbrite-widget-container-2003552143395 iframe {
+.tt-widget iframe {
   width: 100% !important;
-  min-height: 680px !important;
+  min-height: 580px !important;
   border: none !important;
   border-radius: var(--radius-md);
   display: block;
+}
+
+.tt-widget-fallback {
+  text-align: center;
+  padding: 35px 20px;
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  border: 1px dashed #cbd5e1;
+}
+
+.tt-widget-fallback p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+.tt-widget-powered {
+  color: #64748b;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.tt-widget-powered:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* Eventbrite Badge */

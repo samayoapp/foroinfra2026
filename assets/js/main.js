@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initParallax();
   initRegistrationTabs();
-  initEventbriteWidget();
   initRegistrationForm();
   initAgendaTabs();
   initFaqAccordion();
@@ -130,32 +129,10 @@ function initRegistrationTabs() {
 }
 
 /* ==========================================================================
-   3B. EVENTBRITE OFFICIAL CHECKOUT WIDGET INITIALIZATION
+   3B. TICKET TAILOR INTEGRATION NOTES
+   Ticket Tailor's official widget script (widget.js) handles its own inline
+   resizing, responsive styling, and payment flow natively without third-party cookies.
    ========================================================================== */
-function initEventbriteWidget() {
-  const containerId = 'eventbrite-widget-container-2003552143395';
-  const container = document.getElementById(containerId);
-  if (!container) return;
-
-  // Auto-resize iframe when Eventbrite communicates step height via postMessage
-  window.addEventListener('message', (event) => {
-    if (event.origin && (event.origin.includes('eventbrite.com') || event.origin.includes('eventbrite.com.mx'))) {
-      try {
-        const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
-        if (data && data.height) {
-          const iframe = container.querySelector('iframe');
-          const calculatedHeight = Math.max(680, data.height + 25);
-          if (iframe) {
-            iframe.style.height = calculatedHeight + 'px';
-          }
-          container.style.height = calculatedHeight + 'px';
-        }
-      } catch (e) {
-        // Ignore non-json messages
-      }
-    }
-  });
-}
 
 /* ==========================================================================
    4. REGISTRATION FORM & DIGITAL PASS SIMULATOR
