@@ -913,21 +913,30 @@ img {
 }
 
 /* Ticket Tailor Embedded Checkout Widget */
-.tt-widget {
+.tt-widget,
+.tt-widget-wrapper,
+.tt-widget-inline,
+.tt-widget-wrapper.tt-widget-inline {
   width: 100% !important;
-  min-height: 580px;
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  transition: all 0.3s ease;
+  max-width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.tt-widget iframe {
+.tt-widget iframe,
+.tt-widget-wrapper iframe,
+.tt-widget-inline iframe,
+iframe[id^="tt-iframe-"],
+iframe[title="Ticket checkout"] {
   width: 100% !important;
-  min-height: 580px !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  min-height: 600px !important;
   border: none !important;
   border-radius: var(--radius-md);
-  display: block;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 .tt-widget-fallback {
