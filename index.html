@@ -56,8 +56,8 @@
           <li><a href="#evento" class="nav-link">El Foro</a></li>
           <li><a href="#registro" class="nav-link">Registro</a></li>
           <li><a href="#pilares" class="nav-link">4 Pilares</a></li>
-          <li><a href="#expositores" class="nav-link">Expositores</a></li>
-          <li><a href="#agenda" class="nav-link">Agenda</a></li>
+          <li style="display: none;"><a href="#expositores" class="nav-link">Expositores</a></li>
+          <li style="display: none;"><a href="#agenda" class="nav-link">Agenda</a></li>
           <li><a href="#contacto" class="nav-link">Ubicación</a></li>
         </ul>
       </nav>
@@ -285,6 +285,25 @@
         <div class="section-tag">
           <i class="fas fa-id-badge"></i> Admisión & Acreditación
         </div>
+
+        <!-- Trust Features Banner previo al título del registro (Oculto) -->
+        <div style="display: none !important;" aria-hidden="true">
+          <div class="reg-trust-pills">
+            <div style="display: flex; align-items: center; gap: 8px; color: #166534; font-weight: 700; font-size: 0.9rem;">
+              <i class="fas fa-check-circle" style="color: #16a34a; font-size: 1.1rem;"></i>
+              <span>Admisión Gratuita con Registro Previo</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #1e293b; font-size: 0.88rem; font-weight: 600;">
+              <i class="fas fa-qrcode" style="color: #0284c7; font-size: 1.05rem;"></i>
+              <span>Código QR oficial directo a tu correo</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; color: #64748b; font-size: 0.85rem;">
+              <i class="fas fa-shield-alt" style="color: #f59e0b; font-size: 1.05rem;"></i>
+              <span>Plataforma Oficial y Segura</span>
+            </div>
+          </div>
+        </div>
+
         <h2 class="section-title">Formulario de Registro al Foro</h2>
         <p class="section-subtitle">
           Asegura tu cupo de participación en el evento cumbre de infraestructura de Honduras. Cupos presenciales
@@ -298,20 +317,79 @@
            ====================================================================== -->
       <div class="registration-card" id="contenedor-registro" style="padding: 24px; min-height: 580px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); border-radius: 16px;">
 
-        <!-- Registration Features Banner -->
-        <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; padding: 14px 18px; margin-bottom: 20px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px;">
-          <div style="display: flex; align-items: center; gap: 10px; color: #166534; font-weight: 700; font-size: 0.92rem;">
-            <i class="fas fa-check-circle" style="color: #16a34a; font-size: 1.15rem;"></i>
-            <span>Admisión Gratuita con Registro Previo</span>
+        <!-- Registration Guide: 3-Step Process (Oculto) -->
+        <div class="reg-guide-box" style="display: none !important;" aria-hidden="true">
+
+          <!-- Guide Header -->
+          <div class="reg-guide-header">
+            <h3 class="reg-guide-title">
+              <i class="fas fa-route" style="color: #0284c7;"></i>
+              ¿Cómo funciona tu registro y acreditación?
+            </h3>
+            <span class="reg-guide-badge">Guía Rápida en 3 Pasos</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 10px; color: #1e293b; font-size: 0.88rem; font-weight: 600;">
-            <i class="fas fa-qrcode" style="color: #0284c7; font-size: 1.1rem;"></i>
-            <span>Código QR oficial directo a tu correo</span>
+
+          <!-- 3 Steps Grid -->
+          <div class="reg-steps-grid">
+            
+            <!-- Step 1 -->
+            <div class="reg-step-card">
+              <div class="reg-step-top">
+                <span class="reg-step-num step-1">Paso 1</span>
+                <div class="reg-step-icon icon-1">
+                  <i class="fas fa-user-edit"></i>
+                </div>
+              </div>
+              <h4 class="reg-step-title">Completa el formulario</h4>
+              <p class="reg-step-desc">
+                Selecciona tu entrada gratuita abajo y llena tus datos (nombre completo, empresa y correo electrónico).
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="reg-step-card">
+              <div class="reg-step-top">
+                <span class="reg-step-num step-2">Paso 2</span>
+                <div class="reg-step-icon icon-2">
+                  <i class="fas fa-mail-bulk"></i>
+                </div>
+              </div>
+              <h4 class="reg-step-title">Recibirás 2 correos</h4>
+              <p class="reg-step-desc">
+                Enviados por <strong>CHICO</strong> (Cámara Hondureña de la Industria de la Construcción):
+              </p>
+              <div class="reg-step-email-box">
+                <span class="reg-email-tag">
+                  <i class="fas fa-file-invoice"></i> <em>Order complete: #...</em>
+                </span>
+                <span class="reg-email-tag highlight">
+                  <i class="fas fa-ticket-alt"></i> <strong>Your tickets for: Foro 2026</strong>
+                </span>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="reg-step-card">
+              <div class="reg-step-top">
+                <span class="reg-step-num step-3">Paso 3</span>
+                <div class="reg-step-icon icon-3">
+                  <i class="fas fa-qrcode"></i>
+                </div>
+              </div>
+              <h4 class="reg-step-title">Tu Código QR de acceso</h4>
+              <p class="reg-step-desc">
+                Abre el correo <strong>"Your tickets..."</strong> para obtener tu pase digital con código QR. Guárdalo en tu teléfono para el día del evento.
+              </p>
+            </div>
+
           </div>
-          <div style="display: flex; align-items: center; gap: 10px; color: #64748b; font-size: 0.88rem;">
-            <i class="fas fa-shield-alt" style="color: #f59e0b; font-size: 1.1rem;"></i>
-            <span>Plataforma Oficial y Segura</span>
+
+          <!-- Lead to form -->
+          <div class="reg-form-lead">
+            <i class="fas fa-chevron-circle-down"></i>
+            <span>Ingresa tus datos en el formulario oficial a continuación:</span>
           </div>
+
         </div>
 
         <!-- ======================================================================
@@ -341,6 +419,39 @@
                   data-inline-ref="website_widget"></script>
         </div>
         <!-- End of Ticket Tailor Widget -->
+
+        <!-- QR Visual Notice Callout: Ubicado después del formulario para quien regresa a consultar su QR (Oculto) -->
+        <div class="reg-callout-box" id="ayuda-codigo-qr" style="display: none !important;" aria-hidden="true">
+          <div class="reg-callout-header">
+            <i class="fas fa-question-circle"></i>
+            <span>¿Ya completaste tu registro y no ves el Código QR en tu correo?</span>
+          </div>
+          <p class="reg-callout-intro">
+            Si ya te registraste pero en el correo <strong>"Your tickets for: Foro de Infraestructura 2026"</strong> ves una imagen vacía, tu lector de correo (como Gmail o Outlook) está bloqueando las imágenes externas por seguridad. Puedes solucionarlo de 2 formas:
+          </p>
+          <div class="reg-callout-methods">
+            <div class="reg-method-card">
+              <span class="reg-method-badge opt-a">
+                <i class="fas fa-image"></i> Opción A (Habilitar imágenes)
+              </span>
+              <p>
+                Haz clic en <strong>"Mostrar imágenes externas"</strong> o <strong>"Permitir contenido"</strong> en la parte superior de tu correo para que el código QR aparezca en pantalla.
+              </p>
+            </div>
+            <div class="reg-method-card">
+              <span class="reg-method-badge opt-b">
+                <i class="fas fa-file-pdf"></i> Opción B (PDF adjunto)
+              </span>
+              <p>
+                En ese mismo correo viene un <strong>archivo PDF adjunto</strong> con tu boleto oficial. Ábrelo o descárgalo: el código QR ya está incluido y listo para guardar en tu celular sin depender de internet.
+              </p>
+            </div>
+          </div>
+          <div class="reg-callout-footer">
+            <i class="fas fa-mobile-alt"></i>
+            <span><strong>El día del evento (05 de Noviembre, Hotel Copantl):</strong> Solo presenta tu código QR desde la pantalla de tu celular en la mesa de acreditación.</span>
+          </div>
+        </div>
 
       </div>
 
@@ -534,7 +645,7 @@
   <!-- ==========================================================================
        EXPOSITORES / SPEAKERS SECTION
        ========================================================================== -->
-  <section class="section speakers-section" id="expositores">
+  <section class="section speakers-section section-hidden" id="expositores" style="display: none !important;" aria-hidden="true">
     <div class="container">
 
       <div class="section-header">
@@ -649,7 +760,7 @@
   <!-- ==========================================================================
        AGENDA DEL EVENTO
        ========================================================================== -->
-  <section class="section agenda-section" id="agenda">
+  <section class="section agenda-section section-hidden" id="agenda" style="display: none !important;" aria-hidden="true">
     <div class="container">
 
       <div class="section-header">
@@ -948,7 +1059,7 @@
   <!-- ==========================================================================
        PREGUNTAS FRECUENTES (FAQ)
        ========================================================================== -->
-  <section class="section faq-section" id="faq">
+  <section class="section faq-section section-hidden" id="faq" style="display: none !important;" aria-hidden="true">
     <div class="container">
 
       <div class="section-header">
@@ -1123,25 +1234,21 @@
             <li class="footer-link-item"><a href="#evento">Sobre el Evento</a></li>
             <li class="footer-link-item"><a href="#registro">Formulario de Registro</a></li>
             <li class="footer-link-item"><a href="#pilares">Los 4 Pilares</a></li>
-            <li class="footer-link-item"><a href="#expositores">Expositores</a></li>
-            <li class="footer-link-item"><a href="#agenda">Agenda y Horarios</a></li>
+            <li class="footer-link-item" style="display: none;"><a href="#expositores">Expositores</a></li>
+            <li class="footer-link-item" style="display: none;"><a href="#agenda">Agenda y Horarios</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Contact & Press -->
+        <!-- Col 3: Contact -->
         <div>
           <h4 class="footer-title">Contacto</h4>
           <div class="footer-contact-item">
             <i class="fas fa-envelope"></i>
-            <span>info@chico.hn<br>eventos@foroinfra.hn</span>
+            <span><a href="mailto:ventas@chicoorg.org">ventas@chicoorg.org</a></span>
           </div>
           <div class="footer-contact-item">
-            <i class="fab fa-whatsapp"></i>
-            <span>+504 9988-7766</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-newspaper"></i>
-            <span>Prensa y Comunicaciones: medios@chico.hn</span>
+            <i class="fas fa-phone-alt"></i>
+            <span><a href="tel:+50492814116">+504 9281-4116</a></span>
           </div>
         </div>
 
