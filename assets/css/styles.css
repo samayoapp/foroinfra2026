@@ -1646,10 +1646,28 @@ iframe[title="Ticket checkout"] {
   color: #cbd5e1;
   text-decoration: none;
   transition: color var(--transition-fast);
+  word-break: break-word;
 }
 
 .footer-contact-item a:hover {
   color: var(--color-accent-emerald);
+}
+
+.footer-contact-group {
+  margin-bottom: 14px;
+}
+
+.footer-contact-group:not(:last-child) {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-contact-group .footer-contact-item {
+  margin-bottom: 8px;
+}
+
+.footer-contact-group .footer-contact-item:last-child {
+  margin-bottom: 0;
 }
 
 .footer-venue-card {
